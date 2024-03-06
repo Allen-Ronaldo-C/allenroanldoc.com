@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+h1{
+  margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: 600;
+}
+.alen {
+  display: grid;
+  place-content: center;
+  padding: 2rem;
+  text-align: center;
+  min-height: 200px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.alen::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:linear-gradient( white)
+    no-repeat center center / cover;
+  filter: blur(7px) brightness(70%);
+}
+.info {
+  margin-bottom: 1rem;
+}
+.emoji {
+  font-size: 6rem;
+  height: 20px;
+  margin-bottom: 1rem;
+}
+.status {
+  font-size: 2rem;
+  color: honeydew;
+}
+.stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.star {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+.star svg {
+  fill: none;
+  width: 100%;
+  height: 100%;
+  stroke: none;
+  fill: gray;
+}
+
+.selected svg,
+.selected ~ .star svg {
+  fill: #ffc107;
+}
+.star:hover svg,
+.star:hover ~ .star svg {
+  fill: gold;
+}
